@@ -1,5 +1,5 @@
 import React, { useCallback, createContext, useState } from 'react'
-import { getActivity,getIdActivity,postActivity } from '../api/activity'
+import { getActivity,getIdActivity,postActivity,deleteActivity } from '../api/activity'
 
 export const ActivityContext = createContext({})
 
@@ -45,6 +45,20 @@ export default function ActivityProvider(props) {
     })
   }
 
+  
+  const deleteDataActivity = (id) => {
+    deleteActivity(id).then((result) => {
+        let activityData = activity.filter(item=>item.id !== id)
+        let filterActivityData = filterActivity.filter(item=>item.id !== id)
+        setActivity(activityData)
+        setFilterActivity(filterActivityData)
+        return { status: 'OK', result: result }
+    })
+    .catch((error) => {
+        return { status: 'Failed', error }
+    })
+  }
+
   return (
     <ActivityContext.Provider
       value={{
@@ -54,6 +68,7 @@ export default function ActivityProvider(props) {
         setFilterActivity,
         getDataActivity,
         getDetailActivity,
+        deleteDataActivity,
         createDataActivity,
         detailActivity,
         setDetailActivity,

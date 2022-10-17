@@ -28,10 +28,9 @@ export const editActivity = (data, id) =>
         data
     });
 
-export const deleteActivity = (data, id) =>
+export const deleteActivity = (id) =>
     fetchApi({
         url: `/activity-groups/${id}`,
-        method: 'DELETE',
-        data
+        method: 'DELETE'
     });
 
