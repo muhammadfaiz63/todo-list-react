@@ -1,0 +1,16 @@
+.hide-mobile {
+    @apply hidden md:flex;
+}
+
+.hide-website {
+    @apply flex md:hidden;
+}
+
+.grid-hashtags {
+    &-website {
+        @apply hidden md:flex flex-col justify-start items-start space-y-3.5 mt-3.5;
+    }
+    &-mobile {
+        @apply grid grid-cols-3 gap-4 md:hidden;
+    }
+}

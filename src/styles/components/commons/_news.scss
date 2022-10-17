@@ -1,0 +1,54 @@
+.container-news {
+    &-default {
+        @apply flex flex-col justify-start items-start cursor-pointer;
+    }
+
+    &-vertical-bordered {
+        @apply flex flex-col justify-start items-start cursor-pointer p-3 border border-primary max-h-fit;
+    }
+
+    &-horizontal-bordered {
+        @apply grid grid-cols-2 gap-x-6 p-3 border border-primary max-h-fit;
+    }
+}
+
+.container-content-news {
+    &-default {
+        @apply flex flex-col justify-start items-start w-full space-y-1 mt-2;
+    }
+
+    &-vertical-bordered {
+        @apply flex flex-col justify-start items-start w-full space-y-1 mt-2;
+    }
+
+    &-horizontal-bordered {
+        @apply flex flex-col justify-start items-start w-full space-y-1 mt-2;
+    }
+}
+
+.text-title-news {
+    &-default {
+        @apply text-sm md:text-2xl text-primary font-semibold hover:text-primary on-hover;
+    }
+    &-bordered {
+        @apply text-base-leading-20 md:text-lg text-primary font-medium hover:text-primary on-hover;
+    }
+}
+
+.text-date-news {
+    &-default {
+        @apply text-xs md:text-sm text-primary;
+    }
+    &-bordered {
+        @apply text-xxs text-primary;
+    }
+}
+
+.text-desc-news {
+    &-default {
+        @apply text-xs md:text-sm text-primary font-normal;
+    }
+    &-bordered {
+        @apply text-xxs md:text-xs text-primary font-normal;
+    }
+}

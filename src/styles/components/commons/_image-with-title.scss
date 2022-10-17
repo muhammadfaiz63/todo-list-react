@@ -1,0 +1,11 @@
+.container-image-with-title {
+    @apply flex relative overflow-hidden;
+}
+
+.image-with-title {
+    @apply object-cover object-center w-full h-full;
+}
+
+.container-content-image-title {
+    @apply absolute h-full w-full bg-black bg-opacity-40;
+}

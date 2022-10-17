@@ -1,0 +1,27 @@
+.form-label {
+  @apply block font-normal text-xs text-primary;
+}
+
+.form-control {
+  @apply p-2.5 px-0 w-full text-primary text-xs bg-transparent;
+
+  &:read-only {
+    @apply focus:ring-0 focus:border-primary;
+  }
+}
+
+.form-error {
+  @apply border-danger focus:border-danger focus:ring-0
+}
+
+input:focus {
+    outline: none !important;
+}
+
+.form-control-title {
+  @apply p-2.5 px-0 w-full text-black text-4xl font-bold bg-transparent;
+
+  &:read-only {
+    @apply focus:ring-0 focus:border-primary;
+  }
+}

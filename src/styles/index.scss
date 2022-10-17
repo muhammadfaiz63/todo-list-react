@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "layouts/default";
+@import "layouts/header";
+
+@import "base";
+@import "utilities";
+@import "sections";
+
+// COMPONENTS
+@import "components/commons/button";
+@import "components/commons/carousel";
+@import "components/commons/image-with-title";
+@import "components/commons/video-with-title";
+@import "components/commons/list-news";
+@import "components/commons/news";
+@import "components/commons/video-with-fallback";
+
+@import "components/forms/form";
+@import "components/forms/input-checkbox";

@@ -1,0 +1,40 @@
+.label-checkbox {
+	@apply relative flex justify-center items-center cursor-pointer;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.label-checkbox input {
+    @apply cursor-pointer;
+}
+
+.checkmark {
+	@apply absolute flex justify-center items-center border border-neutral bg-white w-6 h-6 active:ring-2 ring-primary-50;
+}
+
+.label-checkbox input:checked~.checkmark {
+    @apply bg-primary;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.label-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.label-checkbox .checkmark:after {
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+	@apply -mt-0.5;
+}
